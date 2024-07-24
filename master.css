@@ -491,6 +491,8 @@ tbody td , thead th{
   }
   table{
     font-size: 70px;
+    width: calc(100% - 600px);
+
   }
 }
 @media (max-width:2035px)  {
@@ -554,7 +556,7 @@ tbody td , thead th{
     .popup .text .transition{
       margin-top: 4rem;
       width: 1150px;
-      font-size: 21px;
+      font-size: 19px;
     }
     .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
       margin-left: 60px;
@@ -569,7 +571,8 @@ tbody td , thead th{
       top: 11rem;
     }
     table{
-      font-size: 50px;
+      font-size: 40px;
+      width: calc(100% - 820px);
     }
     
 }
@@ -604,7 +607,7 @@ tbody td , thead th{
     .popup .text .transition{
       margin-top: 4rem;
       width: 800px;
-      font-size: 17px;
+      font-size: 16px;
     }
     .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
       margin-left: 20px;
@@ -626,13 +629,13 @@ tbody td , thead th{
 
     .btn-back{
       font-size: 50px;
-      right: 9rem;
-      top: 9rem;
+      right: 1rem;
+      top: 4rem;
     }
     table{
-      font-size: 35px;
+      font-size: 22px;
+      width: calc(100% - 300px);
     }
-
 }
 @media (max-width:1024px) {
   @media (max-height:700px) {
@@ -682,11 +685,12 @@ tbody td , thead th{
 
     .btn-back{
       font-size: 35px;
-      right: 7rem;
-      top: 7rem;
+      right: 1rem;
+      top: 2rem;
     }
     table{
-      font-size: 24px;
+      font-size: 18px;
+      width: calc(100% - 200px);
     }
     
 }
@@ -786,7 +790,7 @@ tbody td , thead th{
     .popup .text .transition{
       margin-top: 4rem;
       width: 450px;
-      font-size: 16px;
+      font-size: 14px;
     }
     .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
       margin-left: 0px;
@@ -805,12 +809,14 @@ tbody td , thead th{
       top: 0px;
    }
    .btn-back{
-    font-size: 28px;
-    right: 5rem;
-    top: 5rem;
+    font-size: 22px;
+    right: 1rem;
+    top: 2rem;
   }
   table{
-    font-size: 19px;
+    font-size: 13px;
+    width: calc(100% - 150px);
+
   }
   
 }
@@ -825,7 +831,7 @@ tbody td , thead th{
     .popup .text .transition{
       margin-top: 4rem;
       width: 390px;
-      font-size: 9px;
+      font-size: 8.7px;
     }
     .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
       margin-left: 0px;
@@ -845,7 +851,9 @@ tbody td , thead th{
       top: 2rem;
     }
     table{
-      font-size: 14px;
+      font-size: 9.5px;
+      width: calc(100% - 100px);
+
     }
   
 }
@@ -912,7 +920,8 @@ tbody td , thead th{
       top: 1rem;
     }
     table{
-      font-size: 10px;
+      font-size: 8.5px;
+      width: calc(100% - 50px);
     }
 }
 @media (max-width:350px) {
@@ -927,7 +936,7 @@ tbody td , thead th{
     .popup .text .transition{
       margin-top: 1rem;
       width: 190px;
-      font-size: 3.7px;
+      font-size: 3.6px;
     }
     .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
       margin-left: 10px;
@@ -949,7 +958,7 @@ tbody td , thead th{
       top: 1rem;
     }
     table{
-      font-size: 8px;
+      font-size: 7.5px;
     }
 
 }
