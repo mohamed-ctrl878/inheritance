@@ -1,0 +1,959 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+.layout{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient( 120deg,#191919  0%,#191919  25%, #750E21 25% , #750E21 50%  ,#E3651D 50%,#E3651D 75%, #BED754 75%); 
+    /* background-image:radial-gradient(#02005ec9 -20% , #159895 50% ,#57C5B6 90%);  */
+    /* background-color: #002B5B;*/
+    /* background-color: #000010; */
+    /* background-color: #142850; */
+    /* background-color: #404258; */
+    z-index: -9999999999999999;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 9rem;
+  flex-wrap: wrap;
+  height: 100vh;
+  max-width: 100%;
+  }
+  
+.inhers {
+  background-color: #E8E8E8;
+  /* min-width: 600px; */
+  height: 100px;
+  flex-basis: 100%;
+  max-width: 900px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  align-items: center;
+}
+.head{
+  position: absolute;
+  top :50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 45px;
+  font-weight: 900;
+  color: linear-gradient(90deg,red, green);
+  /* background: linear-gradient(90deg, #500916, #c03851);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #E4EDDB;
+  transform: rotate(90deg);
+  display: inline-flex;
+  gap: 24px;
+  left: -400px;
+  z-index: -9;
+  }
+  .head span{
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+
+.inhers span {
+    font-size: 50px;
+  min-width: max-content;
+  padding: 7px 10px;
+  background-color: hsl(0deg 0% 100% / 98%);
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+}
+.inhers span:not(:last-child) {
+    margin-right: 17px;
+}
+
+.inhers::-webkit-scrollbar-track-piece {
+  width: 20px;
+}
+.inhers::-webkit-scrollbar {
+  width: 0px; /* العرض العمودي */
+  height: 0px; /* العرض الأفقي */
+}
+
+/* خلفية شريط التمرير */
+.inhers::-webkit-scrollbar-track {
+  background-color: rgb(245, 248, 248);
+}
+
+/* شريط التمرير نفسه */
+.inhers::-webkit-scrollbar-thumb {
+  background: #c2c0c0;
+}
+
+/* عند تحويم الفأرة فوق شريط التمرير */
+.inhers::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.members .member .hers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  cursor: pointer;
+  /* background-color: #1A5F7A; */
+  background-color: rgb(253, 188, 126);
+  width:260px;
+  height:260px;
+  border-radius: 50%;
+  font-weight: 700;
+  /* color:#6B728E; */
+  padding: 5px;
+  color:rgb(19, 18, 18);
+}
+.members {
+  flex-basis: 100%;
+  display: flex;
+  gap:40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.member {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+
+}
+.members div.devo {
+  flex-basis: calc(100% / 4 - 35px);
+  display: flex;
+  justify-content: center;
+}
+
+.members .hers:hover{
+    background-color: rgb(253, 204, 158);
+}
+
+.members .member .devo button.next ,.members .member .devo  button.result{
+    color: rgb(241, 231, 231);
+    font-weight: 700;
+    font-size:45px;
+    background-color: #14274E;
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    text-transform: capitalize;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 30px;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  font-weight: 700;
+}
+.creator{
+  bottom: 10px;
+  right: 30px;
+  color: #a4a4a4;
+}
+.creator span{
+  color: #aaa;
+}
+.contact{
+  bottom: 10px;
+  right: 30px;
+  color: #a4a4a4;
+}
+
+
+.popup .layout{
+position: absolute;
+width: 100%;
+height: 100vh;
+background:#14274e86;
+top: 0;
+left: 0;
+z-index: 9;
+}
+.popup .hint{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+z-index: 999;
+background-color: rgb(248, 238, 238);
+padding: 10px;
+border-radius:3px;
+}
+.popup .text{
+  display: flex;
+}
+.popup .text{
+  display: flex;
+  position: relative;
+  height: 500px;
+  padding: 20px;
+  overflow: hidden;
+}
+.popup .text .transition{
+  position: relative;
+  width: 700px;
+  left: 10px;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+.popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.popup .text .hint-one{
+  left: 0;
+}
+.popup .text .hint-two{
+  padding: 20px 0 ;
+  left: 110%;
+}
+.popup .text .hint-three{
+  left: 220%;
+
+}
+/* .popup .text .transition:hover{
+  left: -220%;
+} */
+.popup .text .transition .hint-two span{
+  font-weight: 700;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.8rem;
+}
+.hint-two ul{
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+ul li{
+  margin-top: 20px;
+  line-height: 2;
+}
+.hint-two ul li{
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.hint-two ul li{
+  margin-top: 40px;
+  /* line-height: 1.6; */
+}
+.btns {
+display: flex;
+justify-content: space-between;
+padding: 20px 40px;
+}
+
+.btns .prev,.btns .nest{
+  padding: 18px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btns .prev{
+  background-color: #e9e2e2;
+  border: 1px solid #aaa;
+  color: #14274E;
+}
+.btns .nest{
+  background-color: #f0a174;
+  border: 1px solid #aaa;
+  padding-inline: 50px;
+}
+.red-li{
+  color: #ff3333;
+  font-weight: 800;
+}
+
+.popup{
+  display: none;
+}
+
+.waring{
+  color: rgb(224, 167, 167);
+  font-size: 20px;
+  position: absolute;
+  left: 0%;
+  top: -60px;
+  transform: translateX(-50%);
+}
+
+.choice{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a8a8c48c;
+  z-index: 99;
+  gap: 6rem;
+}
+.choice::after{
+  content: "WHO IS DEAD ?";
+  position: absolute;
+  top : 25% ;
+  font-weight: 700;
+  color: #191919;
+  letter-spacing: 4px;
+  background-color: #E4EDDB;
+  padding: 10px 20px;
+}
+.male , .female{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 900;
+  font-size: 40px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.choice .male{
+  color: #fc5454;
+}
+
+.choice .female{
+  color: #54e3fc;
+}
+.choice div:hover{
+  opacity: .6;
+}
+
+.table{
+  position: absolute;
+  min-height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #F5F7F8;
+  padding: 20px;
+  z-index: 9999999999;
+}
+.results{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #54e3fc57;
+}
+table thead , table tbody{
+  margin-bottom: 30px;
+}
+.table th:first-child{
+  width: 65%;
+}
+table th , table td{
+  text-align: start;
+}
+tbody td , thead th{
+  border: 1px solid #aaa;
+  padding: 10px 25px;
+}
+.btn-back{
+  font-weight: 700;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  padding: 6px 20px;
+  border: #aaa;
+  color: white;
+  cursor: pointer;
+  z-index: 9999999999;
+  background-color : #fc5454;
+}
+
+@media (min-width:2036px) {
+  .container{
+    gap: 5rem;
+  }
+  .inhers{
+    max-width: 1300px;
+    height: 130px;
+    }.inhers span{
+      font-size: 55px;
+    }
+  .member {
+    width: 1450px;
+    gap: 20px;
+  }
+  .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+    font-size: 45px;
+    width:350px;
+    height:350px;  
+  }
+  .head{
+    font-size: 100px;
+    gap: 50px;
+  }
+  .creator , .contact{
+    font-size: 20px;
+  }
+  .popup .text{
+    height: 950px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 130px;
+  }
+    .popup .text .transition{
+      margin-top: 4rem;
+      width: 1450px;
+      font-size: 35px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 60px;
+      padding-inline: 20px 80px;
+    }
+    .btns .prev,.btns .nest{
+      font-size: 70px;
+    }
+    .choice{
+      gap: 16rem;
+    }
+    .choice::after{
+      font-size: 70px;
+    }
+      .male , .female{
+      font-size: 150px;
+    }
+      
+    
+  @media (max-height:1700px ){
+    .container{
+      gap: 3rem;
+    }
+    .inhers{
+      max-width: 500px;
+      height: 77px;
+      }.inhers span{
+        font-size: 22px;
+      }
+    .member {
+      width: 470px;
+      gap: 10px;
+    }
+    .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+      font-size: 16px;
+      width:130px;
+      height:130px;  
+    }
+    .head{
+      font-size: 50px;
+
+    }
+  }
+  @media (max-height:1020px ){
+    .head{
+      font-size: 20px;
+      gap: 30px;
+      left: -180px;
+    }
+  }
+  .btn-back{
+    font-size: 90px;
+    right: 14rem;
+    top: 14rem;
+  }
+  table{
+    font-size: 70px;
+  }
+}
+@media (max-width:2035px)  {
+  .inhers{
+    max-width: 770px;
+    height: 90px;
+    }.inhers span{
+      font-size: 26px;
+    }
+  .member {
+    width: 600px;
+    gap: 20px;
+  }
+  .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+    font-size: 22px;
+    width:160px;
+    height:160px;  
+  }
+  .choice{
+    gap: 12rem;
+  }
+  .choice::after{
+    font-size: 50px;
+  }
+    .male , .female{
+    font-size: 80px;
+  }
+  @media (max-height:1280px ){
+    .container{
+      gap: 2rem;
+    }
+    .inhers{
+      max-width: 500px;
+      height: 77px;
+      }.inhers span{
+        font-size: 22px;
+      }
+    .member {
+      width: 470px;
+      gap: 10px;
+    }
+    .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+      font-size: 16px;
+      width:130px;
+      height:130px;  
+    }
+  }
+  .head{
+    left: -250px;
+  }
+  .creator , .contact{
+    font-size: 10px;
+  }
+  .popup .text{
+    height: 680px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 100px;
+  }
+    .popup .text .transition{
+      margin-top: 4rem;
+      width: 1150px;
+      font-size: 21px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 60px;
+      padding-inline: 20px 80px;
+    }
+    .btns .prev , .btns .nest{
+      font-size: 27px;
+    }
+    .btn-back{
+      font-size: 70px;
+      right: 11rem;
+      top: 11rem;
+    }
+    table{
+      font-size: 50px;
+    }
+    
+}
+@media (max-width:1586px) {
+
+  .inhers{
+    max-width: 550px;
+    height: 66px;    
+    }.inhers span{
+      font-size: 20px;
+    }
+  .member {
+    width: 500px;
+    gap: 10px;
+  }
+  .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+    font-size: 16px;
+    width:120px;
+    height:120px;  
+  }
+  .creator , .contact{
+    font-size: 8.7px;
+  }
+  .popup .text{
+    height: 500px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 90px;
+    left: 20px;
+  }
+    .popup .text .transition{
+      margin-top: 4rem;
+      width: 800px;
+      font-size: 17px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 20px;
+      padding-inline: 20px 80px;
+    }
+    .btns .prev , .btns .nest{
+      font-size: 27px;
+    }
+    
+    .choice{
+      gap: 9rem;
+    }
+    .choice::after{
+      font-size: 40px;
+    }
+    .male , .female{
+      font-size: 55px;
+    }
+
+    .btn-back{
+      font-size: 50px;
+      right: 9rem;
+      top: 9rem;
+    }
+    table{
+      font-size: 35px;
+    }
+
+}
+@media (max-width:1024px) {
+  @media (max-height:700px) {
+    .container{
+      gap: 2rem;
+    }
+    .inhers{
+      max-width: 300px;
+      height: 50px;    
+      }.inhers span{
+        font-size: 18px;
+      }
+    .member {
+      width: 350px;
+      gap: 10px;
+    }
+    .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+      font-size: 10px;
+      width:90px;
+      height:90px;  
+    }
+  }
+    .head{
+      gap: 14px;
+      font-size:16px ;
+      left: -100px;
+  }
+  .popup .text{
+    height: 450px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 100px;
+  }
+    .popup .text .transition{
+      margin-top: 4rem;
+      width: 580px;
+      font-size:14px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 10px;
+      padding-inline: 20px 80px;
+    }
+    .btns .prev , .btns .nest{
+      font-size: 23px;
+    }
+
+    .btn-back{
+      font-size: 35px;
+      right: 7rem;
+      top: 7rem;
+    }
+    table{
+      font-size: 24px;
+    }
+    
+}
+@media (max-width:950px) {
+
+  .inhers{
+    max-width: 350px;
+    height: 57px; 
+    }.inhers span{
+      font-size: 18px;
+    }
+  .member {
+    width: 400px;
+    gap: 10px;
+  }
+  .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+    font-size: 13px;
+    width:96px;
+    height:96px;  
+  }
+  .head{
+    font-size: 14px;
+    left: -70px;
+  }
+  .creator , .contact{
+    font-size: 7px;
+  }
+  @media (max-height:700px) {
+    .container{
+      gap: 2rem;
+    }
+    .inhers{
+      max-width: 300px;
+      height: 50px;    
+      }.inhers span{
+        font-size: 18px;
+      }
+    .member {
+      width: 300px;
+      gap: 10px;
+    }
+    .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+      font-size: 10px;
+      width:80px;
+      height:80px;
+    }
+    .head{
+      font-size: 14px;
+      left: -73px;
+  }
+  }
+  @media (max-height:420px) {
+    .container{
+      gap: 1rem;
+    }
+    .inhers{
+      max-width: 250px;
+      height: 30px;    
+      }.inhers span{
+        font-size: 15px;
+      }
+    .member {
+      width: 220px;
+      gap: 10px;
+    }
+    .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+      font-size: 7px;
+      width: 60px;
+      height: 60px;
+    }
+    .head{
+      font-size: 14px;
+      left: -73px;
+  }
+  }
+
+  .choice{
+    gap: 7rem;
+  }
+  .choice::after{
+    font-size: 30px;
+  }
+  .male , .female{
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width:845px) {
+  .popup .text{
+    height: 400px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 40px;
+  }
+    .popup .text .transition{
+      margin-top: 4rem;
+      width: 450px;
+      font-size: 16px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 0px;
+      padding-inline: 20px 80px;
+    }
+    .btns .prev , .btns .nest{
+      font-size: 16px;
+    }
+     .popup ul li{
+      margin-top: 20px;
+    }
+    .popup .text .hint-one, .popup .text .hint-three{
+      margin-top: -50px ;
+    }
+    .waring{
+      top: 0px;
+   }
+   .btn-back{
+    font-size: 28px;
+    right: 5rem;
+    top: 5rem;
+  }
+  table{
+    font-size: 19px;
+  }
+  
+}
+@media (max-width:668px) {
+  .popup .text{
+    height: 350px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 30px;
+  }
+    .popup .text .transition{
+      margin-top: 4rem;
+      width: 390px;
+      font-size: 9px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 0px;
+      padding-inline: 20px 80px;
+    }
+    .btns .prev , .btns .nest{
+      font-size: 13px;
+      padding: 10px 15px;
+    }
+
+     .popup ul li{
+      margin-top: 15px;
+    }
+    .btn-back{
+      font-size: 16px;
+      right: 2rem;
+      top: 2rem;
+    }
+    table{
+      font-size: 14px;
+    }
+  
+}
+@media (max-width:590px) {
+  .inhers{
+    max-width: 250px;
+    height: 40px; 
+    }.inhers span{
+      font-size: 13px;
+    }
+  .member {
+    width: 250px;
+    gap: 10px;
+  }
+  .members .member .hers ,.members .member .devo button.next ,.members .member .devo  button.result{
+    font-size: 10px;
+    width:75px;
+    height:75px;  
+  }
+  .head{
+    font-size: 18px;
+    gap: 12px;
+    left: -110px;
+  }
+  .creator , .contact{
+    font-size: 5.8px;
+  }
+  .popup .text{
+    height: 250px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 20px;
+  }
+    .popup .text .transition{
+      margin-top: 2rem;
+      width: 270px;
+      font-size: 8px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 0px;
+      padding-inline: 20px 80px;
+      padding-top: 0;
+    }
+    .btns .prev , .btns .nest{
+      font-size: 10px;
+      padding: 10px 15px;
+    }
+     .popup ul li{
+      margin-top: 10px;
+    }
+    .choice{
+      gap: 5rem;
+    }
+    .choice::after{
+      font-size: 20px;
+    }
+    .male , .female{
+      font-size: 30px;
+    }
+    .btn-back{
+      font-size: 14px;
+      right: 1rem;
+      top: 1rem;
+    }
+    table{
+      font-size: 10px;
+    }
+}
+@media (max-width:350px) {
+  .popup .text{
+    height: 130px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 15px;
+    top: 20px;
+  }
+    .popup .text .transition{
+      margin-top: 1rem;
+      width: 190px;
+      font-size: 4px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 10px;
+      padding-inline: 20px 80px;
+      padding-top: 0;
+    }
+    .btns .prev , .btns .nest{
+      font-size: 8px;
+      padding: 7px 10px;
+    }
+
+     .popup ul li{
+      margin-top: 5px;
+    }
+
+    .btn-back{
+      font-size: 13px;
+      right: 1rem;
+      top: 1rem;
+    }
+    table{
+      font-size: 8px;
+    }
+
+}
+
+
+
+/* i know responsive web with Grid will be EASIER  */
