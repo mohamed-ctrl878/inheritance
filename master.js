@@ -950,7 +950,7 @@ document.getElementsByClassName("btn-back")[0].addEventListener("click",(e)=>{
                 member.insertBefore(parentFemale, insertBeforeElement);
             }
             if(!document.getElementsByClassName("husband")[0]){
-                member.insertBefore(parentFemale, children[children.length - 3]);
+                member.insertBefore(parentMale, insertBeforeElement);
             }
             removeMemo()
             inhers.innerHTML = "<span></span>";
