@@ -891,7 +891,7 @@ tbody td , thead th{
     .popup .text .transition{
       margin-top: 2rem;
       width: 270px;
-      font-size: 7.4px;
+      font-size: 7px;
     }
     .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
       margin-left: 0px;
@@ -936,7 +936,7 @@ tbody td , thead th{
     .popup .text .transition{
       margin-top: 1rem;
       width: 190px;
-      font-size: 3.6px;
+      font-size: 3.2px;
     }
     .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
       margin-left: 10px;
