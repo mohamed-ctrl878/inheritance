@@ -494,6 +494,9 @@ tbody td , thead th{
     width: calc(100% - 600px);
 
   }
+  .footer{
+    height: 90px;
+  }
 }
 @media (max-width:2035px)  {
   .inhers{
