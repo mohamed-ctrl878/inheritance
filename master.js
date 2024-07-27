@@ -570,7 +570,7 @@ function fatherRes(){
 }
 
 function huswife(){
-    if(!FamilyTree.SonsFemales &&!FamilyTree.SonsFemales){
+    if(!FamilyTree.SonsMales &&!FamilyTree.SonsFemales){
         if(forod.husband){
             stringResult.push({name:`husband`,welth:1/2})
             welth+=1/2;
