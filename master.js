@@ -506,9 +506,9 @@ function sonResult(){
                         for(let d = 0 ; d < forod.daughter.length; d++){
                             if(d == i)continue;
                             if(forod.daughter[d].val == 1){
-                                stringResult.push({name:"daughter"+" of son ".repeat(forod.daughter[d].depth),welth:"All of the son's daughters are partners in 1/6"})
+                                stringResult.push({name:"daughter"+" of son ".repeat(forod.daughter[d].depth),welth:"All of the son's daughters are partners in 1/6 if they are found"})
                             }else{
-                                stringResult.push({name:`daughter(${forod.daughter[d].val})`+" of son ".repeat(forod.daughter[d].depth),welth:"All of the son's daughters are partners in 1/6"})
+                                stringResult.push({name:`daughter(${forod.daughter[d].val})`+" of son ".repeat(forod.daughter[d].depth),welth:"All of the son's daughters are partners in 1/6 if they are found"})
                             }
                             choice = true
                         }   
