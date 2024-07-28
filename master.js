@@ -973,6 +973,7 @@ function removeMemo(){
     stringResult = []
     forod ={}
     esabat ={}
+    document.querySelector(".results table").remove()
     removeChildsFromRoots(sonsROOT)
     removeChildsFromRoots(fathersROOT)
     removeChildsFromRoots(brothersROOT)
