@@ -965,6 +965,44 @@ tbody td , thead th{
     }
 
 }
+@media (max-width:290px) {
+  .popup .text{
+    height: 130px;
+    padding-left:20px ;
+  }
+  .popup .waring{
+    font-size: 13px;
+    top: 20px;
+  }
+    .popup .text .transition{
+      margin-top: 1rem;
+      width: 175px;
+      font-size: 2px;
+    }
+    .popup .text .hint-one,.popup .text .hint-two, .popup .text .hint-three{
+      margin-left: 10px;
+      padding-inline: 20px 80px;
+      padding-top: 0;
+    }
+    .btns .prev , .btns .nest{
+      font-size: 8px;
+      padding: 7px 10px;
+    }
+
+     .popup ul li{
+      margin-top: 5px;
+    }
+
+    .btn-back{
+      font-size: 13px;
+      right: 1rem;
+      top: 1rem;
+    }
+    table{
+      font-size: 5px;
+    }
+
+}
 
 
 
