@@ -31,48 +31,140 @@ The app:
 > Place the script after the DOM elements or include it at the end of the `<body>` so elements exist before the script runs.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Inheritance Calculator</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- Add CSS here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="master.css">
+    <meta name="description" content="This site is for resolving inheritance issues according to Islamic law. Enter, try and identify the deceased, then identify all his relatives now..! Of course, there are some cases that I did not discuss, but I discussed many, many issues related to “cliques” and “those with authority.”">
+    <title>Inheritance</title>
 </head>
 <body>
-  <!-- popup hint -->
-  <div id="pop" class="popup"> ... </div>
+    <div class="layout"> <div></div></div>
+    <div class="bigcontent">
+    <div id="content" class="container">
+        <div class="inhers"><span></span></div>
+        <div class="members">
+          <div class="member">
+          <div class="devo">
+            <span class="hers son mother-non father-non orign" data-gender ="male">son</span>
+          </div>
+            <div class="devo">
+            <span class="hers daug mother-non father-non  son-non orign" data-gender ="male">daughter</span>
+          </div>
+          <div class="devo">
+            <span class="hers father father-non  son-non">father</span>
+          </div>
+            <div class="devo">
+            <span class="hers mother mother-non son-non">mother</span>
+          </div>
+          <div class="devo">
+            <span class="hers husband son-non mother-non father-non orign  choice-mele" >husband</span>
+          </div>
+          <div class="devo">
+            <span class="hers wife son-non mother-non  father-non orign choice-female">wife</span>
+          </div>
+          <div class="devo">
+            <span class="hers  mother-non father-non orign">brother</span>
+          </div>
+          <div class="devo">
+            <span class="hers mother-non father-non son-non orign">sister</span>
+          </div>
+          <div class="devo">
+            <span class="hers mother-non puncle father-non orign"data-gender ="male">paternal uncle</span>
+          </div>
+          <!-- <div class="devo">
+            <span class="hers mother-non paunt father-non  husband-non uncle-non"data-gender ="female">paternal aunt</span>
+          </div>
+          <div class="devo">
+            <span class="hers mother-non muncle father-non  husband-non uncle-non"data-gender ="male">maternal uncle</span>
+          </div>
+          <div class="devo">
+            <span class="hers mother-non maunt father-non  husband-non uncle-non"data-gender ="female">maternal aunt</span>
+          </div> -->
+          <div class="devo">
+            <button class="next">next branch</button>
+            </div>
+          <div class="devo">
+            <button class="result" >Results</button>
+            </div>
+          </div>
+        </div>
+      <div class="head"><span>I</span><span>N</span><span>H</span><span>E</span><span>R</span><span>I</span><span>T</span><span>A</span><span>N</span><span>C</span><span>E</span><span>S</span></div>
+        </div>
+      </div>
 
-  <!-- gender choice popup -->
-  <div class="choice">
-    <button class="male">Male</button>
-    <button class="female">Female</button>
-  </div>
 
-  <!-- members buttons (each must match the exact text used in the script) -->
-  <div class="members">
-    <button class="hers member">son</button>
-    <button class="hers member">daughter</button>
-    <button class="hers member">father</button>
-    <button class="hers member">mother</button>
-    <button class="hers member">brother</button>
-    <button class="hers member">sister</button>
-    <button class="hers member">paternal uncle</button>
-    <button class="hers member">maternal uncle</button>
-    <button class="hers member husband">husband</button>
-    <button class="hers member wife">wife</button>
-  </div>
-
-  <!-- selected path display -->
-  <div class="inhers"><span></span></div>
-
-  <!-- controls and results -->
-  <button class="next">Next</button>
-  <button class="result">Get Result</button>
-  <div class="results" style="display:none"></div>
-  <button class="btn-back">Back</button>
-
-  <script src="path/to/your/script.js"></script>
+        <div id="pop" class="popup">
+          <div class="layout"></div>
+          <section class="hint">
+            <div class="text">
+              <div class="transition">
+                <div class="hint-one">
+                  <i class="fa-solid fa-circle-exclamation waring"></i>
+                  <ul>
+                    <li>The results will be in accordance with Islamic law.</li>
+                    <li>In this application, I did not discuss everything that revolves around inheritance, of course.</li>
+                    <li class="red-li">Do not depend on the results of the application. You can ask the specialist in this science to help you.</li>
+                    <li>We discussed ESABAT & FOROD, but Companions of the womb not yet.</li>
+                    <li>I did not discuss my maternal or paternal brothers, nor did I discuss my paternal uncles.</li>
+                    <li>In this version, the blocked persons will not be displayed, the heirs will be displayed.</li>
+                </ul>
+                </div>
+                <div class="hint-two">
+                  <span>How to use:</span>
+                    <p>Branches can be selected from the original branch, for example </p>
+                    <ul>
+                      <li>
+                        Such as the son of the son of the son or the daughter of the son of the son, and so on
+                    </li>
+                      <li>
+                        You can also do what we mentioned above with brother and uncle
+                    </li>
+                      <li>
+                        You can also do this with grandparents, whether they are maternal grandmother, paternal grandmother, or paternal grandfather
+                    </li>
+                    <li><span>examples of testing:</span> <br>Son son son son cousin: here, click on the Son button 4 times, then click on Uncle</li>
+                  </ul>
+                </div>
+                <div class="hint-three">
+                  <ul>
+                    <li>Daughter son son son : here, click on the Daughter button 1 times, then click on son button 3 times, Then click the next branch</li>
+                    <li> Paternal grandfather : here, click on the father button 2 times, Then click the next branch</li>
+                    <li>There are some people who, once selected, will move to create another branch, namely the husband, wife, brother, sister and uncle</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="btns">
+              <button class="prev">Previous</button>
+              <button class="nest">Next</button>
+            </div>
+          </section>
+        </div>
+        <div class="choice">
+          <div class="male">
+           <i class="fa-solid fa-mars"></i>
+           <span>male</span>
+          </div>
+          <div class="female">
+           <i class="fa-solid fa-venus"></i>
+           <span>female</span>
+          </div>
+         </div>
+        <div class="results">
+          <button class="btn-back">back</button>
+        </div>
+        <footer class="footer">
+          <span class="creator">Creator : <span>Mohamed Mahmoud Eleskandarany</span></span>
+          <span class="contact">Contact : bnaboabdallah@gmail.com</span>
+        </footer>
+        <script src="master.js"></script>
 </body>
 </html>
 ```
